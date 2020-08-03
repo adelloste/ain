@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-4 offset-4">
             <div class="p-4">
-                <form [formGroup]="searchForm" (ngSubmit)="onSubmit()" novalidate>
+                <form [formGroup]="searchForm" (ngSubmit)="searchForm.valid && onSubmit()" novalidate>
                     <div class="form-group">
                         <label class="m-0" for="cf"></label>
                         <input type="search" class="form-control input-search" id="cf" aria-describedby="codice fiscale" placeholder="CERCA COD. FISCALE" formControlName="cf">
