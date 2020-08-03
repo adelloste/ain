@@ -4,6 +4,8 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AidManagerService }   from '@Core/services/aid-manager.service';
 import { ModalManagerService } from '@Core/services/modal-manager.service';
 
+import { Cf } from '@App/shared/validators/cf.validator';
+
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -29,7 +31,7 @@ export class HomeComponent implements OnInit {
     this.searchForm = this.fb.group({
       cf: [
         '',
-        Validators.compose([Validators.required])
+        Validators.compose([Validators.required, Cf()])
       ]
     });
   }
