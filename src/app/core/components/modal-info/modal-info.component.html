@@ -1,0 +1,20 @@
+<div class="modal-content">
+    <div class="modal-body">
+        <div class="modhead">
+            <button type="button" class="close" aria-label="close" (click)="activeModal.dismiss('Cross click')"></button>
+            <div class="modhead-title">
+                {{ data.title }}
+            </div>
+        </div>
+        <div class="modal-padd">
+            <div class="modauth-text">
+                {{ data.msg }}
+            </div>
+            <div class="modauth-buttons">
+                <button class="btn btn-yellow" (click)="activeModal.close('Close click')">
+                    {{ data.btn }}
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

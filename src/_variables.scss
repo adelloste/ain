@@ -1,0 +1,48 @@
+$icon-font-path: '../node_modules/bootstrap-sass/assets/fonts/bootstrap/';
+// theme
+$theme-colors: (
+  "primary": #0047bb
+);
+//
+$enable-rounded: false;
+// media query
+$portrait: "only screen and (max-width:800px)";
+$xs: "only screen and (max-width:767px)";
+$small: "only screen and (max-width:959px)";
+$desktop: "only screen and (min-width:768px)";
+$large: "only screen and (min-width:960px)";
+$largescreen: "only screen and (min-width:1024px)";
+// colors
+$light-blue:        #d0e0f6;
+$alt-light-blue:    #D7E4F7;
+$blockquote:        #4C5E70;
+$popover-color:     #5A6772;
+$blue:              #0047bb;
+$dark-blue:         #00307F;
+$purple:            #827BEB;
+$tab-payments-blue: #4773BA;
+$yellow:            #eedc00;
+$yellow-light:      #FFEC00;
+$orange:            #ff7e00;
+$red:               #cc0000; 
+$turchese:          #68DDC3;
+$green:             #2ACB48;
+$basic:             #FFFFFF;
+$primary:           #3C3C3B;
+$primary-light:     #797979;
+$primary-dark:      #000;
+$bg-light:          #f3f3f3;
+$table-border-grey: #D0D0D0;
+$gray-input:        #bbb8b8;
+// remap old colors 
+$table-grey:      $bg-light;
+$gray-light:      $table-border-grey;
+$medium-grey:     $table-border-grey;
+$medium-dark:     $primary-light;
+$popup-bg:        $medium-dark;
+$dark:            $medium-dark;
+$very-dark:       $primary;
+$new-grey:        $very-dark;
+$new-light-grey:  $very-dark;
+$darkest:         $primary-dark;
+$product-success: $green;

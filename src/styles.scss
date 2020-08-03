@@ -1,0 +1,121 @@
+@import "variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("/assets/fonts/Montserrat-Regular.ttf");
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: #3C3C3B;
+    background-color: #f3f3f3;
+}
+
+.btn-yellow {
+    background: #eedc00;
+    border-color: #eedc00;
+    color: #3C3C3B;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 6px 25px;
+    text-align: center;
+    border-radius: 25px;
+    min-width: 150px;
+    transition: all .4s ease;
+    line-height: 23px;
+}
+
+// modal
+.stylemodal-pit {
+    position: absolute;
+
+    .modhead-title {
+        padding: 0 90px 0 90px;
+    }
+
+    .modal-dialog {
+        max-width: 615px;
+    }
+
+    .modal-content {
+        border-radius: 0;
+        border: 0 none;
+
+        .modal-body {
+            padding: 0;
+
+            .modhead {
+                background: $blue;
+                padding: 11px 15px;
+                position: relative;
+                text-transform: uppercase;
+                color: $basic;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+                text-align: center;
+
+                .close {
+                    position: absolute;
+                    top: 2px;
+                    right: 10px;
+                }
+            }
+
+            .modal-padd {
+                padding: 50px;
+                text-align: center;
+
+                @media #{$small} {
+                    padding: 40px 20px;
+                }
+
+                &.no-padd {
+                    padding: 0;
+                }
+
+                .modauth-tit {
+                    font-size: 20px;
+                    color: $blue;
+                    font-weight: 700;
+                    max-width: 600px;
+                    margin: 50px auto 50px auto;
+                    text-transform: uppercase;
+                }
+
+                .modauth-heading {
+                    font-size: 16px;
+                    color: $primary;
+                    font-weight: 600;
+                    max-width: 400px;
+                    margin: 15px auto 30px auto;
+                    text-transform: uppercase;
+                }
+
+                .modauth-text {
+                    font-size: 16px;
+                    color: $primary;
+                    font-weight: 400;
+                    max-width: 600px;
+                    margin: 0 auto 30px auto;
+                }
+
+                .modauth-buttons {
+                    padding-top: 30px;
+                    border-top: 1px solid $table-border-grey;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    align-items: center;
+                    
+                    .btn {
+                        margin: 0 5px;
+                    }
+                }
+            }
+        }
+    }
+}
