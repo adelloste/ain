@@ -30,6 +30,10 @@ Questi sono i comandi definiti in `package.json`:
 * `deploy-github` - build the project and deploy.
 * `npm run compodoc` - run `compodoc`.
 
+### Demo
+
+Published site at https://adelloste.github.io/ain/
+
 ## Project structure
 
 ```
