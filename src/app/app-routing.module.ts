@@ -7,9 +7,12 @@ const APP_ROUTES: Routes = [
     loadChildren: () => import('./main/main.module').then(m => m.MainModule)
   },
   {
-    path: '',
-    redirectTo: '/main/home',
-    pathMatch: 'full'
+    path: 'not-found',
+    loadChildren: () => import('./not-found/not-found.module').then(m => m.NotFoundModule)
+  },
+  {
+    path: '**',
+    redirectTo: '/main/home'
   }
 ];
 
