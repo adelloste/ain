@@ -9,7 +9,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --configuration es5",
-    "build": "ng build",
+    "build": "ng build --prod --progress",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

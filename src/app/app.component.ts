@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
     )
     .subscribe(
       (event: NavigationEnd) => {
-        gtag('config', 'UA-96184893-1', { 'page_path': event.urlAfterRedirects });
+        gtag('config', 'UA-106206225-2', { 'page_path': event.urlAfterRedirects });
       }
     );
   }

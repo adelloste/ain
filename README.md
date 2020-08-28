@@ -26,8 +26,8 @@ npm install
 Questi sono i comandi definiti in `package.json`:
 
 * `npm run start` - for a dev server.
-* `npm run build --prod` - build the project.
-* `deploy-github` - build the project and deploy.
+* `npm run build` - prod build the project.
+* `deploy-github` - prod build the project and deploy.
 * `npm run compodoc` - run `compodoc`.
 
 ### Demo
