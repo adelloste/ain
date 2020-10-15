@@ -12,6 +12,10 @@ const MAIN_ROUTES: Routes = [
       {
         path: 'home',
         loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
+      },
+      {
+        path: 'verifycode',
+        loadChildren: () => import('../verify-code/verify-code.module').then(m => m.VerifyCodeModule)
       }
     ]
   }

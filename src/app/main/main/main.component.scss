@@ -1,0 +1,14 @@
+@import "../../../variables";
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    min-width: 100px;
+    width: 70%;
+    max-width: 320px;
+    background-color: $yellow;
+    color: #fff;
+}

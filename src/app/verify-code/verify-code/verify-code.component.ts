@@ -6,16 +6,16 @@ import { ModalManagerService } from '@Core/services/modal-manager.service';
 
 import { Cf } from '@App/shared/validators/cf.validator';
 
-import { Result } from '@App/core/models/result';
+import { Result } from '@Core/models/result';
 
 import { NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'ain-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'ain-verify-code',
+  templateUrl: './verify-code.component.html',
+  styleUrls: ['./verify-code.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class VerifyCodeComponent implements OnInit {
 
   searchForm: FormGroup;
 
@@ -34,15 +34,19 @@ export class HomeComponent implements OnInit {
       cf: [
         '',
         Validators.compose([Validators.required, Cf()])
+      ],
+      code: [
+        '',
+        Validators.compose([Validators.required])
       ]
     });
   }
 
   onSubmit(): void {
     // get result
-    let result: Result = this.aidManager.check(this.searchForm.value.cf);
+    let result: Result = this.aidManager.check(this.searchForm.value.cf, this.searchForm.value.code)
     // show result
-    const modalRef: NgbModalRef = this.modalManager.openInfoModal(`Il codice generato è ${ result.code }`);
+    const modalRef: NgbModalRef = this.modalManager.openInfoModal(`Il codice inserito ${ result.valid ? `è valido` : `non è valido`}. Il codice generato è ${ result.code }`);
     modalRef.result.then(
       (result: boolean) => {
         if(result) { }

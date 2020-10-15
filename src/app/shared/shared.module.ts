@@ -5,7 +5,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent }  from './components/header/header.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+
+import { OnlyNumbersDirective }  from './directives/only-numbers.directive';
 
 @NgModule({
     imports: [
@@ -16,7 +19,10 @@ import { HeaderComponent } from './components/header/header.component';
         NgbModule
     ],
     declarations: [
-        HeaderComponent
+        HeaderComponent,
+        SidenavComponent,
+
+        OnlyNumbersDirective
     ],
     exports: [
         CommonModule,
@@ -25,7 +31,10 @@ import { HeaderComponent } from './components/header/header.component';
 
         NgbModule,
         
-        HeaderComponent
+        HeaderComponent,
+        SidenavComponent,
+
+        OnlyNumbersDirective
     ]
 })
 export class SharedModule { }

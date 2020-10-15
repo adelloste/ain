@@ -3,6 +3,8 @@ import { Router, NavigationEnd } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
 
+import { environment } from '@Environments/environment';
+
 declare let gtag: Function;
 
 @Component({
@@ -22,7 +24,7 @@ export class AppComponent implements OnInit {
 
   stats(): void {
     this.router.events.pipe(
-      filter((event) => event instanceof NavigationEnd),
+      filter((event) => event instanceof NavigationEnd && environment.production),
     )
     .subscribe(
       (event: NavigationEnd) => {

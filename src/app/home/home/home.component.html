@@ -1,15 +1,21 @@
 <div class="container-fluid bg-form">
     <div class="row">
-        <div class="col-4 offset-4">
+        <div class="col-12">
             <div class="p-4">
-                <form [formGroup]="searchForm" (ngSubmit)="searchForm.valid && onSubmit()" novalidate>
-                    <div class="form-group">
-                        <label class="m-0" for="cf"></label>
-                        <input type="search" class="form-control input-search" id="cf" aria-describedby="codice fiscale" placeholder="CERCA COD. FISCALE" formControlName="cf" [ngClass]="{'is-invalid': searchForm.controls.cf.invalid && (searchForm.controls.cf.dirty || searchForm.controls.cf.touched)}">
-                        <div class="font-italic invalid-feedback">
-                            Fornire un codice fiscale valido
+                <form class="p-4" [formGroup]="searchForm" (ngSubmit)="searchForm.valid && onSubmit()" novalidate>
+
+                    <div class="form-row justify-content-center">
+
+                        <div class="col-12 col-sm-4 col-md-3">
+                            <label class="sr-only" for="cf"></label>
+                            <input type="text" class="form-control mb-2" id="cf" aria-describedby="codice fiscale" placeholder="COD. FISCALE" formControlName="cf"  [ngClass]="{'is-invalid': searchForm.controls.cf.invalid && (searchForm.controls.cf.dirty || searchForm.controls.cf.touched)}">
+                            <div class="font-italic invalid-feedback">
+                                Fornire un codice fiscale valido
+                            </div>
                         </div>
+
                     </div>
+                    
                 </form>
             </div>
         </div>

@@ -1,0 +1,35 @@
+<div class="container-fluid bg-form">
+    <div class="row">
+        <div class="col-12">
+            <div class="p-4">
+                <form class="p-4" [formGroup]="searchForm" (ngSubmit)="searchForm.valid && onSubmit()" novalidate>
+
+                    <div class="form-row justify-content-center">
+
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                            <label class="sr-only" for="cf"></label>
+                            <input type="text" class="form-control mb-2" id="cf" aria-describedby="codice fiscale" placeholder="COD. FISCALE" formControlName="cf"  [ngClass]="{'is-invalid': searchForm.controls.cf.invalid && (searchForm.controls.cf.dirty || searchForm.controls.cf.touched)}">
+                            <div class="font-italic invalid-feedback">
+                                Fornire un codice fiscale valido
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                            <label class="sr-only" for="code"></label>
+                            <input type="text" class="form-control mb-2" id="code"aria-describedby="codice ain" placeholder="COD. AIN" maxlength="10" formControlName="code"  [ngClass]="{'is-invalid': searchForm.controls.code.invalid && (searchForm.controls.code.dirty || searchForm.controls.code.touched)}" onlyNumbers>
+                            <div class="font-italic invalid-feedback">
+                                Fornire un codice ain valido
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-4 col-md-2 col-lg-2">
+                            <button type="submit" class="btn btn-yellow mb-2" [disabled]="searchForm.invalid">
+                                CERCA
+                            </button>
+                        </div>
+
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -4,9 +4,10 @@ import { SharedModule } from '../shared/shared.module';
 
 import { ModalInfoComponent } from './components/modal-info/modal-info.component';
 
-import { AidManagerService }    from './services/aid-manager.service';
-import { ModalManagerService }  from './services/modal-manager.service';
-import { LoaderManagerService } from './services/loader-manager.service';
+import { AidManagerService }     from './services/aid-manager.service';
+import { ModalManagerService }   from './services/modal-manager.service';
+import { LoaderManagerService }  from './services/loader-manager.service';
+import { SidenavManagerService } from './services/sidenav-manager.service';
 
 @NgModule({
   imports: [
@@ -21,7 +22,8 @@ import { LoaderManagerService } from './services/loader-manager.service';
   providers: [
     AidManagerService,
     ModalManagerService,
-    LoaderManagerService
+    LoaderManagerService,
+    SidenavManagerService
   ],
   entryComponents: [
     ModalInfoComponent
@@ -40,7 +42,8 @@ export class CoreModule {
       providers: [
         AidManagerService,
         ModalManagerService,
-        LoaderManagerService
+        LoaderManagerService,
+        SidenavManagerService
       ]
     };
   }

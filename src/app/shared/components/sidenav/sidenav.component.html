@@ -1,0 +1,17 @@
+<div class="nav-header d-flex align-items-center border-bottom border-primary p-3">
+    <span class="text-primary text-uppercase font-weight-bold">menu</span> 
+</div>
+<ul class="nav flex-column py-2">
+    <li class="nav-item">
+        <a class="nav-link d-flex align-items-center py-3" [routerLink]="['/main/home']" (click)="onClick()">
+            <i class="far fa-file pr-2"></i>
+            <span>Genera codice</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link d-flex align-items-center py-3" [routerLink]="['/main/verifycode']" (click)="onClick()">
+            <i class="far fa-file pr-2"></i>
+            <span>Verifica codice</span>
+        </a>
+    </li>
+</ul>

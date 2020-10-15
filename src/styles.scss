@@ -1,15 +1,27 @@
 @import "variables";
 @import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/@fortawesome/fontawesome-free/css/all.css";
+@import "swiper/swiper-bundle.css";
 
 @font-face {
     font-family: "Montserrat";
     src: url("assets/fonts/Montserrat-Regular.ttf");
 }
 
+html,
+body {
+    position: relative;
+    height: 100%;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     color: #3C3C3B;
     background-color: #f3f3f3;
+
+    main {
+        height: 100%;
+    }
 }
 
 .btn-yellow {
